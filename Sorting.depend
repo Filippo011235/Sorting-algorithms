@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1523632494 source:c:\users\filippo\documents\love is in the air\sem 4\pamsi\sorting\sorting\src\slinkedlist.cpp
+	"SLinkedList.hh"
+
+1523632427 c:\users\filippo\documents\love is in the air\sem 4\pamsi\sorting\sorting\include\slinkedlist.hh
+	<list>
+	<iostream>
+
+1523467880 c:\users\filippo\documents\love is in the air\sem 4\pamsi\sorting\sorting\include\snode.hh
+	"SLinkedList.hh"
+
+1523467880 source:c:\users\filippo\documents\love is in the air\sem 4\pamsi\sorting\sorting\src\snode.cpp
+	"SNode.hh"
+
+1524692129 source:c:\users\filippo\documents\love is in the air\sem 4\pamsi\sorting\sorting\src\main.cpp
+	<iostream>
+	<list>
+	<vector>
+	<cstdlib>
+	<cmath>
+	<ctime>
+	"SList.hh"
+
+1524220646 c:\users\filippo\documents\love is in the air\sem 4\pamsi\sorting\sorting\include\slist.hh
+	<iostream>
+	<list>
+	<iterator>
+	<algorithm>
+
+1524691977 source:c:\users\filippo\documents\love is in the air\sem 4\pamsi\sorting\sorting\src\slist.cpp
+	"SList.hh"
+
+1524601464 source:c:\users\filippo\documents\love is in the air\sem 4\pamsi\sorting\sorting\src\shellsort.cpp
+	"ShellSort.hh"
+
+1524601464 c:\users\filippo\documents\love is in the air\sem 4\pamsi\sorting\sorting\include\shellsort.hh
+
+1524737824 source:c:\users\filippo\documents\love is in the air\sem 4\pamsi\sorting\sorting\main.cpp
+	<iostream>
+
