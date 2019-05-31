@@ -40,14 +40,12 @@ void SList::AddLastRemoveFirst(SList &S_2){
 
 void SList::Display(){
     cout << "Displaying all elements: " << endl;
-// Iterating over list elements and display them
+    // Iterating over list elements and display them
     list<int>::iterator it = Data.begin();
     while(it != Data.end()){
         cout<< *it <<" ";
         it++;
 
-//        if(*it < *--it){cout << "GRR! ";}
-//        it++;
     }
     cout << endl << "Done with Displaying." << endl;
 }
@@ -94,7 +92,6 @@ int SList::Pivot(){
         int begX = *it_b;
         int midX = *mid;
         int finX = *it_e;
-//        cout << endl << "state: " << *beg <<" "<< *mid <<" "<< *fin << endl;
         if(begX > midX){
             SwapX(begX, midX);
         }
@@ -104,54 +101,15 @@ int SList::Pivot(){
         if(midX > finX){
             SwapX(finX, midX);
         }
-//        cout << endl << "Before: ";
-//        Display();
-//        cout << endl << "1: " << *beg <<" "<< *mid <<" "<< *fin << endl;
-
-//        if(*beg > *mid){
-//            Swap(beg, mid);
-//        }
-//        if(*beg > *fin){
-//            Swap(beg, fin);
-//        }
-//        if(*mid > *fin){
-//            Swap(fin, mid);
-//        }
 
         if(!((begX<=midX)&&(midX<=finX))){
             cout << endl << "FALSE: " << begX <<" "<< midX <<" "<< finX << endl;
         }
         return midX;
 
-//        if((*beg<=*mid)&&(*mid<=*fin)){
-//            cout << "@";
-//        } else {
-//cout << "After: ";
-//Display();
-//            cout << endl << "@: " << *beg <<" "<< *mid <<" "<< *fin << endl;
-//        }
-//cout << "return: " << *mid << endl;
-//cout << "mid itself: " << &mid << endl;
-
-//            return mid;
-
-//        if(midX == *mid){
-//            return mid;
-//        }
-//        if(midX == *beg){
-//            return beg;
-//        }
-//        if(midX == *fin){
-//            return fin;
-//        }
-
     } else {        // Just choose beginning
-//        Display();
-//        cout << "Size: " << Data.size() << " return: " << *++it_b <<endl;
         return *it_b;
-//        return ++it_b;
     }
-
 }   // Pivot
 
 void SList::MergeSort(){
@@ -179,25 +137,13 @@ void SList::QuickSort(){
     if(Data.size() <= 1){
         return;
     }
-
-//    cout << "About to sWap"<< endl;
-//    Display();
-//        list<int>::iterator it_b = Data.begin();
-//    list<int>::iterator it_e = Data.end();
-//    Swap(--it_e, it_b);
-//    Display();
-//    cout << "Done"<< endl;
-    // Choosing pivot, based on mean of front & back elements
-//    list<int>::iterator p = Pivot();
     int* p;
     int xp = Pivot();
     p = &xp;
-//    cout << "pivot: " << *p << endl;
 
     SList L,E,G;
 
     while(!IsEmpty()){
-//        cout << "Last one: " << Last() << " and the p: " << p << endl;
         if(Last() < *p){
             L.addLast(RemoveLast());
         } else if(Last() == *p){
@@ -206,23 +152,10 @@ void SList::QuickSort(){
             G.addLast(RemoveLast());
         }
     }
-//cout << "L dis";
-//L.Display();
-//cout << "E dis";
-//E.Display();
-//cout << "G dis";
-//G.Display();
-
-//    cout << "after while, proceeding to recurrence" << endl;
 
     // Recur on those lists
     L.QuickSort();
     G.QuickSort();
-
-//cout << "L dis";
-//L.Display();
-//cout << "G dis";
-//G.Display();
 
 
     while(!L.IsEmpty()){
@@ -234,7 +167,6 @@ void SList::QuickSort(){
     while(!G.IsEmpty()){
         AddLastRemoveFirst(G);
     }
-//    cout << "done" << endl;
     return;
 }   // QuickSort
 

@@ -29,7 +29,6 @@ public:
     void Swap(list<int>::iterator left,list<int>::iterator right);
     void SwapX(int &left,int &right);
 
-//    list<int>::iterator Pivot();
     int Pivot();
 
     void Merge(SList &S1, SList &S2);
